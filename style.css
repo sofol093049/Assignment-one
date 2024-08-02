@@ -112,7 +112,7 @@
     background-color: whitesmoke;
 }
 #massage-symbol{
-    margin-left:55%;
+    margin-left:58%;
     margin-top: -20px;
 
 }
@@ -182,5 +182,10 @@
     border-radius: 10px;
     text-align: center;
     background-color: whitesmoke;
+}
+#massage-symbol{
+    margin-left:70%;
+    margin-top: -20px;
+
 }
   }
