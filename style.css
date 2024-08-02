@@ -111,6 +111,12 @@
     text-align: center;
     background-color: whitesmoke;
 }
+#massage-symbol{
+    margin-left:55%;
+    margin-top: -20px;
+
+}
+
 
 @media only screen and (max-width: 600px) {
     #main-div-two-section {
