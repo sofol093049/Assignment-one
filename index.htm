@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    
-    <div  id="parent_div_display">
-                
+
+    <div id="parent_div_display">
+
     </div>
     <div id="main-div-two-section">
         <div id="random-section">
@@ -22,8 +22,8 @@
         </div>
         <div class="vertical-line"></div>
         <div id="second-div-two-section" class="grid-container">
-            
-        
+
+
             <button class="grid-item" id="btn0" value="0">0</button>
             <button class="grid-item" id="btn1" value="1">1</button>
             <button class="grid-item" id="btn2" value="2">2</button>
@@ -37,117 +37,131 @@
             <button class="grid-item" id="remove_number">Delete Number</button>
             <button class="grid-item" id="clear_all_number">Clear All</button>
             <button class="grid-item" id="submit">Submit</button>
-            </div>
-        
+        </div>
+
     </div>
-    <div id="massage-div"> </div>
+    
+        <div id="massage-div"> </div>
+        
+        <div id="massage-symbol"></div>
 
 </body>
 <script>
-var count_number=0;
-var number_array=[];
-var rand_number;
+    var count_number = 0;
+    var number_array = [];
+    var rand_number;
 
-document.getElementById('btn0').addEventListener('click', output_number);
-document.getElementById('btn1').addEventListener('click', output_number);
-document.getElementById('btn2').addEventListener('click', output_number);
-document.getElementById('btn3').addEventListener('click', output_number);
-document.getElementById('btn4').addEventListener('click', output_number);
-document.getElementById('btn5').addEventListener('click', output_number);
-document.getElementById('btn6').addEventListener('click', output_number);
-document.getElementById('btn7').addEventListener('click', output_number);
-document.getElementById('btn8').addEventListener('click', output_number);
-document.getElementById('btn9').addEventListener('click', output_number);
-document.getElementById('submit').addEventListener('click', output_submit);
+    document.getElementById('btn0').addEventListener('click', output_number);
+    document.getElementById('btn1').addEventListener('click', output_number);
+    document.getElementById('btn2').addEventListener('click', output_number);
+    document.getElementById('btn3').addEventListener('click', output_number);
+    document.getElementById('btn4').addEventListener('click', output_number);
+    document.getElementById('btn5').addEventListener('click', output_number);
+    document.getElementById('btn6').addEventListener('click', output_number);
+    document.getElementById('btn7').addEventListener('click', output_number);
+    document.getElementById('btn8').addEventListener('click', output_number);
+    document.getElementById('btn9').addEventListener('click', output_number);
+    document.getElementById('submit').addEventListener('click', output_submit);
 
-document.getElementById('remove_number').addEventListener('click', remove_number);
-document.getElementById('clear_all_number').addEventListener('click',clear_all);
-document.getElementById('random_number').addEventListener('click',random_number);
-function output_number(event){
-    
-    if(count_number<6){
-        
-    let value_number=event.target.value;
-    number_array[count_number]=value_number;
-    
-    count_number=count_number+1;
-    let new_p=document.createElement('p');
-    new_p.innerText=value_number;
-    let division=document.getElementById('parent_div_display');
-    division.appendChild(new_p);}
-    
-}
-function remove_number(){
-    if(count_number>0){
-        number_array.pop();
-    count_number=count_number-1;
-let total_tag=document.getElementById('parent_div_display').getElementsByTagName('p');
+    document.getElementById('remove_number').addEventListener('click', remove_number);
+    document.getElementById('clear_all_number').addEventListener('click', clear_all);
+    document.getElementById('random_number').addEventListener('click', random_number);
+    function output_number(event) {
 
-total_tag=total_tag[total_tag.length-1];
+        if (count_number < 6) {
 
-document.getElementById('parent_div_display').removeChild(total_tag);
-let ok_massage=document.getElementById('massage-div');
-    ok_massage.innerText="";}
-}
+            let value_number = event.target.value;
+            number_array[count_number] = value_number;
 
-function clear_all(){
-    count_number=0;
-    let sum_tag=document.getElementById('parent_div_display').getElementsByTagName('p');
-    let all_tag=sum_tag.length;
-   
-    for(let i=0;i<all_tag;i++){
-        delete_all=sum_tag[sum_tag.length-1];
-        document.getElementById('parent_div_display').removeChild(delete_all);
-        number_array.pop();
+            count_number = count_number + 1;
+            let new_p = document.createElement('p');
+            new_p.innerText = value_number;
+            let division = document.getElementById('parent_div_display');
+            division.appendChild(new_p);
+        }
+
     }
-    let ok_massage=document.getElementById('massage-div');
-    ok_massage.innerText="";
-    
-}
-function output_submit(){
-   
-    if(number_array.length<6){
-   
-        /*alert("Please Enter Six(6) digits Number.")*/
-        let ok_massage=document.getElementById('massage-div');
-    ok_massage.innerText="Please Enter Six Digit(6) Number";
-    ok_massage.style.color="Blue";
-    
-    }
-    else{
-    let int_number=number_array[0];
-for(let i=1;i<count_number;i++){
-int_number=int_number.concat(number_array[i]);
-}
-int_number=parseInt(int_number);
-if(rand_number==int_number){
-    /*alert("The Pin You Entered is Correct.");*/
-    let ok_massage=document.getElementById('massage-div');
-    ok_massage.innerText="Pin Is Right";
-    ok_massage.style.color="Green";
-}
-else{
-    /*alert("The Pin is Incorrect.");*/
-    let ok_massage=document.getElementById('massage-div');
-    ok_massage.innerText="Pin Is Incorrect";
-    ok_massage.style.color="red";
-}
-}}
+    function remove_number() {
+        if (count_number > 0) {
+            number_array.pop();
+            count_number = count_number - 1;
+            let total_tag = document.getElementById('parent_div_display').getElementsByTagName('p');
 
-function random_number(){
+            total_tag = total_tag[total_tag.length - 1];
 
-     rand_number= Math.random();
-    console.log(rand_number);
-    rand_number=rand_number*1000000;
-   
-    
-  
-    rand_number= Math.floor(rand_number);
-    if(rand_number.toString().length<6){
-        rand_number=rand_number*10;
+            document.getElementById('parent_div_display').removeChild(total_tag);
+            let ok_massage = document.getElementById('massage-div');
+            ok_massage.innerText = "";
+            let ok_symbol = document.getElementById('massage-symbol');
+                ok_symbol.innerHTML = "";
+        }
     }
-    document.getElementById('rand_number_display_here').innerHTML=rand_number;
-}
+
+    function clear_all() {
+        count_number = 0;
+        let sum_tag = document.getElementById('parent_div_display').getElementsByTagName('p');
+        let all_tag = sum_tag.length;
+
+        for (let i = 0; i < all_tag; i++) {
+            delete_all = sum_tag[sum_tag.length - 1];
+            document.getElementById('parent_div_display').removeChild(delete_all);
+            number_array.pop();
+        }
+        let ok_massage = document.getElementById('massage-div');
+        ok_massage.innerText = "";
+        let ok_symbol = document.getElementById('massage-symbol');
+                ok_symbol.innerHTML = "";
+
+    }
+    function output_submit() {
+
+        if (number_array.length < 6) {
+
+            /*alert("Please Enter Six(6) digits Number.")*/
+            let ok_massage = document.getElementById('massage-div');
+            ok_massage.innerText = "Please Enter Six Digit(6) Number";
+            ok_massage.style.color = "Blue";
+
+        }
+        else {
+            let int_number = number_array[0];
+            for (let i = 1; i < count_number; i++) {
+                int_number = int_number.concat(number_array[i]);
+            }
+            int_number = parseInt(int_number);
+            if (rand_number == int_number) {
+                /*alert("The Pin You Entered is Correct.");*/
+                let ok_massage = document.getElementById('massage-div');
+                ok_massage.innerText = "Pin Is Right";
+                ok_massage.style.color = "Green";
+                let ok_symbol = document.getElementById('massage-symbol');
+                ok_symbol.innerHTML = "<img src=\'tik.jpeg' width=\'40px\' height=\'10px\'>";
+            }
+            else {
+                /*alert("The Pin is Incorrect.");*/
+                let ok_massage = document.getElementById('massage-div');
+                let ok_symbol = document.getElementById('massage-symbol');
+                ok_symbol.innerHTML = "<img src=\'cross.png' width=\'40px\' height=\'10px\'>";
+                ok_massage.innerText = "Pin Is Incorrect";
+                ok_massage.style.color = "red";
+            }
+        }
+    }
+
+    function random_number() {
+
+        rand_number = Math.random();
+        console.log(rand_number);
+        rand_number = rand_number * 1000000;
+
+
+
+        rand_number = Math.floor(rand_number);
+        if (rand_number.toString().length < 6) {
+            rand_number = rand_number * 10;
+        }
+        document.getElementById('rand_number_display_here').innerHTML = rand_number;
+    }
 </script>
 
 </html>
