@@ -1,0 +1,180 @@
+
+
+#main-div-two-section{
+    height: auto;
+    width: full;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-around;
+  border: 5px solid gold;
+ 
+}
+#second-div-two-section{
+    height: auto;
+    
+    
+   margin-left:-10%;
+    
+   
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    background-color: blueviolet;
+    row-gap: 10px;
+    column-gap:10px;
+    
+    
+    
+}
+.grid-item{
+    
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+.grid-item:hover{
+    background-color: #008CBA;
+  color: white;
+}
+#parent_div_display{
+    display: flex;
+   justify-content: center;
+    border:1px solid black;
+    width:65px;
+    height: 30px;
+    background-color:blanchedalmond;
+    margin-top: 10px;
+    margin-left: 74%;
+    margin-bottom:0px;
+    padding:0px;
+    border-radius: 5px;;
+    
+}
+#parent_div_display p{
+    padding:0px;
+    margin: 0px;
+    font-size: 20px;
+    flex-wrap: wrap;
+
+    
+}
+#rand_number_display{
+    display: flex;
+   
+    border:1px solid black;
+    width:65px;
+    height: 30px;
+    background-color:blanchedalmond;
+    margin-top:40%;
+    margin-left: 30%;
+    margin-bottom:0px;
+    padding:0px;
+    border-radius: 5px;
+}
+#rand_number_display p{
+    padding:0px;
+    margin: 0px;
+    font-size: 20px;
+    
+    
+}
+#random_number{
+    padding: 10px;
+    color:#18c4f3;
+    font-size: 20px;
+   
+}
+#random_number:hover{
+    background-color: #008CBA;
+    color: white;
+}
+.vertical-line{
+   
+    border: 1px solid black;
+}
+#remove_number, #clear_all_number{
+    color:red;
+    font-style: oblique;
+}
+#massage-div{
+    width:300px;
+    height:20px;
+    margin:auto;
+    border: 3px solid gold;
+    border-radius: 10px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+@media only screen and (max-width: 600px) {
+    #main-div-two-section {
+      
+      flex-direction:column-reverse
+    }
+    #second-div-two-section{
+        margin:auto;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: blueviolet;
+           
+    }
+    .grid-item{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    font-size: 10px;
+    text-align: center;
+}
+#parent_div_display{
+    display: flex;
+   justify-content: center;
+    border:1px solid black;
+    width:65px;
+    height: 30px;
+    background-color:blanchedalmond;
+    margin-top: 10px;
+    margin-left: 43%;
+    margin-bottom:0px;
+    padding:0px;
+    border-radius: 5px;;
+    
+}
+#random-section{
+    display: flex;
+    flex-direction: column;
+}
+#rand_number_display{
+    
+   
+   
+    margin-top:2%;
+    margin-left: 43.5%;
+   
+    border-radius: 5px;
+}
+#random_number{
+    padding: 5px;
+    color:#18c4f3;
+    font-size: 20px;
+    width: 100px;
+    margin-left: 40%;
+   
+}
+#massage-div{
+    width:300px;
+    height:20px;
+    margin:auto;
+    border: 3px solid gold;
+    border-radius: 10px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+  }
