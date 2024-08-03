@@ -1,12 +1,15 @@
 
+body{
+    background-color: #31473A;
+}
 
 #main-div-two-section{
     height: auto;
     width: full;
-    background-color: aquamarine;
+    background-color: #CEE6F2;
     display: flex;
     justify-content: space-around;
-  border: 5px solid gold;
+  border: 5px solid #73605B;
  
 }
 #second-div-two-section{
@@ -21,7 +24,7 @@
 .grid-container{
     display: grid;
     grid-template-columns: 80px 80px 80px;
-    background-color: blueviolet;
+    background-color: #E3867D;
     row-gap: 10px;
     column-gap:10px;
     
@@ -86,8 +89,11 @@
 }
 #random_number{
     padding: 10px;
-    color:#18c4f3;
+    color:#F98866;
     font-size: 20px;
+    background-color: #FFF2D7;
+    border: 1px solid black;
+    border-radius: 5px;
    
 }
 #random_number:hover{
@@ -106,7 +112,7 @@
     width:300px;
     height:20px;
     margin:auto;
-    border: 3px solid gold;
+    border: 3px solid #73605B;
     border-radius: 10px;
     text-align: center;
     background-color: whitesmoke;
@@ -117,7 +123,12 @@
 
 }
 
-
+#submit{
+    color:green;
+}
+#submit:hover{
+    color:white;
+}
 @media only screen and (max-width: 600px) {
     #main-div-two-section {
       
@@ -178,7 +189,7 @@
     width:300px;
     height:20px;
     margin:auto;
-    border: 3px solid gold;
+    border: 3px solid #73605B;
     border-radius: 10px;
     text-align: center;
     background-color: whitesmoke;
